@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "cmath": "cpp",
+        "stack": "cpp",
+        "xutility": "cpp",
+        "algorithm": "cpp",
+        "xstring": "cpp",
+        "utility": "cpp"
+    }
+}
