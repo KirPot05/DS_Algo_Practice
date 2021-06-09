@@ -5,22 +5,10 @@
 */
 
 #include <iostream>
-
+#include "Binary_Tree.hpp"
 using namespace std;
 
-struct node{
 
-    int data;
-    struct node *left;
-    struct node *right;
-
-        node(int val){
-            data = val;
-            left = nullptr;
-            right = nullptr;
-        }
-
-};
 
 int search(int arr[], int st, int end, int element){
 
@@ -29,6 +17,7 @@ int search(int arr[], int st, int end, int element){
             return i;
         }
     }
+
     return -1;
 }
 
@@ -42,7 +31,7 @@ void print(int arr[], int n){
 
 }
 
-node* buildtree(int preorder[], int inorder[], int start, int end){
+Node* buildtree(int preorder[], int inorder[], int start, int end){
 
     static int idx = 0;
 
@@ -51,7 +40,7 @@ node* buildtree(int preorder[], int inorder[], int start, int end){
     }
 
     int curr = preorder[idx++];
-    node* root  = new node(curr);
+    Node* root  = new Node(curr);
 
     if(start == end){
         return root;
@@ -66,35 +55,6 @@ node* buildtree(int preorder[], int inorder[], int start, int end){
 }   
 
 
-void inorder_Print(node* root){
-
-    if(root == nullptr){
-        return;
-    }
-
-    inorder_Print(root -> left);
-
-    cout << root -> data << " ";
-
-    inorder_Print(root -> right);
-
-
-}
-
-void preorder_Print(node* root){
-
-    if(root == nullptr){
-        return;
-    }
-
-    cout << root -> data << " ";
-
-    preorder_Print(root -> left);
-
-    preorder_Print(root -> right);
-
-
-}
 
 
 int main()
@@ -102,16 +62,16 @@ int main()
     int preorder[] = {1, 2, 4, 3, 5};
     int inorder[] = {4, 2, 1, 5, 3};
 
-    node* root = buildtree(preorder, inorder, 0, 4);
+    Node* root = buildtree(preorder, inorder, 0, 4);
 
     print(preorder, 5);
-    cout << endl << "Tree Preorder Traversal" << endl;
-    preorder_Print(root);
-    cout << endl << endl;
+    cout << "Tree Preorder Traversal" << endl;
+    Preorder(root);
+    cout << endl << endl << endl;
     
     print(inorder, 5);
-    cout << endl << "Tree Inorder Traversal" << endl;
-    inorder_Print(root);
+    cout << "Tree Inorder Traversal" << endl;
+    Inorder(root);
 
     return 0;
 }
