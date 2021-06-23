@@ -42,3 +42,48 @@ void Inorder(Node* root){
 
 }
 
+
+void Preorder(Node *root){
+
+    if(root == nullptr){
+        return;
+    }
+
+    cout << root -> data << " ";
+    Preorder(root -> left);
+    Preorder(root -> right);
+
+}
+
+
+void Postorder(Node *root){
+
+    if(root == nullptr){
+        return;
+    }
+    
+    Postorder(root -> left);
+    Postorder(root -> right);
+    cout << root -> data << " ";
+}
+
+
+
+
+
+bool search(Node *root, int val){
+
+
+    if(root -> data == val){
+        return true;
+    }
+
+    if(root -> data > val){
+        return search(root -> left, val);
+    } else {
+        return search(root -> right, val);
+    }
+
+    return false;
+
+}
