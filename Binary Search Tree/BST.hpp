@@ -87,3 +87,11 @@ bool search(Node *root, int val){
     return false;
 
 }
+
+int count(Node *root){
+    if(root == nullptr){
+        return 0;
+    }
+
+    return 1 + count(root -> left) + count(root -> right);
+}

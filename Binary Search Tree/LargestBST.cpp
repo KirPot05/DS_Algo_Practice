@@ -47,14 +47,6 @@ Info largestBST(Node *root){
 }
 
 
-int count(Node *root){
-    if(root == nullptr){
-        return 0;
-    }
-
-    return 1 + count(root -> left) + count(root -> right);
-}
-
 
 int main()
 {
