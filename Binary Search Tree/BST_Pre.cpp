@@ -11,7 +11,7 @@ Node* constructBST(int preorder[], int *index, int key, int min, int max, int n)
 
     if(key > min && key < max){
        root = new Node(key);
-        *index += 1;
+        (*index)++;
 
         if(*index < n){
             root -> left = constructBST(preorder, index, preorder[*index], min, key, n);
