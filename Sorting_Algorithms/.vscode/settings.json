@@ -5,6 +5,9 @@
         "tuple": "cpp",
         "utility": "cpp",
         "xstring": "cpp",
-        "ostream": "cpp"
-    }
+        "ostream": "cpp",
+        "istream": "cpp"
+    },
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.compilerPath": "C://Program Files (x86)//mingw-w64//i686-8.1.0-posix-dwarf-rt_v6-rev0//mingw32//bin//g++.exe"
 }

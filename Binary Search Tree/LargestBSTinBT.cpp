@@ -12,7 +12,7 @@ struct Info
 };
 
 
-Info largestBST(Node *root){
+Info largestBSTinBT(Node *root){
 
     if(root == nullptr){
         return {0, INT_MIN, INT_MAX, 0, true};
@@ -22,8 +22,8 @@ Info largestBST(Node *root){
         return {1, root -> data, root -> data, 1, true};
     }
 
-    Info leftInfo = largestBST(root -> left);
-    Info rightInfo = largestBST(root -> right);
+    Info leftInfo = largestBSTinBT(root -> left);
+    Info rightInfo = largestBSTinBT(root -> right);
 
     Info curr;
     curr.size = (1 + leftInfo.size + rightInfo.size);
@@ -60,7 +60,7 @@ int main()
     
     cout << count(root) << endl;
 
-    cout << "Largest BST size : " << largestBST(root).ans << endl;
+    cout << "Largest BST size : " << largestBSTinBT(root).ans << endl;
 
 
     return 0;
