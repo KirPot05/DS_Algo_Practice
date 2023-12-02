@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
 
-
-
-int octalToDecimal(int n){
+int octalToDecimal(int n)
+{
 
     int ans = 0, x = 1;
 
-    while(n){
+    while (n)
+    {
         int y = n % 10;
         ans += x * y;
         x *= 8;
@@ -17,28 +17,28 @@ int octalToDecimal(int n){
     return ans;
 }
 
-int decToOctal(int n){
+int decToOctal(int n)
+{
 
     int ans = 0, x = 1;
 
-    while(x <= n){
+    while (x <= n)
+    {
         x *= 8;
     }
     x /= 8;
 
-    while(x){
-        int last = n/x;
+    while (x)
+    {
+        int last = n / x;
         n -= x * last;
 
         x /= 8;
         ans = ans * 10 + last;
     }
 
-
     return ans;
 }
-
-
 
 int main()
 {

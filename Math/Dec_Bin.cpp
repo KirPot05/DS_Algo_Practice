@@ -1,19 +1,21 @@
 #include <iostream>
 using namespace std;
 
-
-int decimalTobinary(int n){
+int decimalTobinary(int n)
+{
 
     int ans = 0, x = 1;
 
-    while(x <= n){
+    while (x <= n)
+    {
         x <<= 1;
     }
 
     x >>= 1;
 
-    while(x){
-        int lastdigit = n/x;
+    while (x)
+    {
+        int lastdigit = n / x;
         n -= x * lastdigit;
         x >>= 1;
         ans = ans * 10 + lastdigit;
@@ -22,11 +24,13 @@ int decimalTobinary(int n){
     return ans;
 }
 
-int binaryTodecimal(int n){
+int binaryTodecimal(int n)
+{
 
     int ans = 0, x = 1;
 
-    while(n){
+    while (n)
+    {
         int y = n % 10;
         ans += (x * y);
         x <<= 1;
@@ -34,7 +38,6 @@ int binaryTodecimal(int n){
     }
     return ans;
 }
-
 
 int main()
 {
