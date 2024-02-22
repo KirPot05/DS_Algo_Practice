@@ -5,7 +5,7 @@
 // Input: n = 4, arr[] = {1, 2, 9, 15}
 // Output:  1 9 2 15
 // Explanation: a1=1 , a2=2 , b1=9 , b2=9
-// So the final array will be :  
+// So the final array will be :
 // a1, b1, a2, b2 = { 1, 9, 2, 15 }
 
 // Example 2:
@@ -16,14 +16,13 @@
 #include <iostream>
 using namespace std;
 
-void shuffleArray(int arr[],int n)
+void shuffleArray(int arr[], int n)
 {
-	    // Your code goes here
-	
+    // Your code goes here
 }
 
 int main(int argc, char const *argv[])
 {
-    
+
     return 0;
 }

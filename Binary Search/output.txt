@@ -1,0 +1,3 @@
+Number: 7
+Square Root (integer): 2
+Square Root(decimal): 2.64575

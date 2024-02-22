@@ -23,28 +23,18 @@
 // 11
 // 19
 
-
-
-
-
 #include <iostream>
 using namespace std;
 
-
-
-
 int main(int argc, char const *argv[])
 {
-    
+
     return 0;
 }
-
-
 
 // #include
 // using namespace std;
 // #define int long long
-
 
 // int geek_onacci(int a, int b, int c, int n)
 // {
@@ -59,18 +49,15 @@ int main(int argc, char const *argv[])
 
 //     return geek_onacci(a, b, c, n-1) + geek_onacci(a, b, c, n-2) + geek_onacci(a, b, c, n-3);
 // }
- 
-
 
 // // Driver code to test above functions
 // int32_t main()
 // {
-     
+
 //     ios_base::sync_with_stdio(0);
 //     cin.tie(NULL);
 //     cout.tie(NULL);
 
-       
 //        int t;
 //        cin >> t;
 //        while(t--)
@@ -81,8 +68,7 @@ int main(int argc, char const *argv[])
 
 //            cout << geek_onacci(a, b, c, n) << endl;
 //        }
-       
-    
+
 //     return 0;
- 
+
 // }

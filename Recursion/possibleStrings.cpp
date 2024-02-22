@@ -1,5 +1,5 @@
 /*
-Given a string str your task is to complete the function spaceString which takes only one argument the string str and  finds all possible strings that can be made by placing spaces (zero or one) in between them. 
+Given a string str your task is to complete the function spaceString which takes only one argument the string str and  finds all possible strings that can be made by placing spaces (zero or one) in between them.
 
 For eg .  for the string abc all valid strings will be
             abc
@@ -27,43 +27,35 @@ Output: xy$x y$
 using namespace std;
 #define endl '\n'
 
-
-void util(vector<string> &vec,char str[],char buff[ ],int i,int j,int n)
+void util(vector<string> &vec, char str[], char buff[], int i, int j, int n)
 {
-        if(i==n )
-        {
-            buff[j]='\0';
-            vec.push_back(buff);
-            return;
-        }
+    if (i == n)
+    {
+        buff[j] = '\0';
+        vec.push_back(buff);
+        return;
+    }
 
-        buff[j]=str[i];
-        util(vec,str,buff,i+1,j+1,n);
+    buff[j] = str[i];
+    util(vec, str, buff, i + 1, j + 1, n);
 
-        //or space
-        buff[j]=' ';
-        buff[j+1]=str[i];
-        util(vec,str,buff,i+1,j+2,n);
-
+    // or space
+    buff[j] = ' ';
+    buff[j + 1] = str[i];
+    util(vec, str, buff, i + 1, j + 2, n);
 }
 
-
-vector<string>  spaceString(char str[])
+vector<string> spaceString(char str[])
 {
-    char *buff = new char[2*strlen(str)-1];
+    char *buff = new char[2 * strlen(str) - 1];
     vector<string> vec;
-    buff[0]=str[0];
-    util(vec,str,buff,1,1,strlen(str));
+    buff[0] = str[0];
+    util(vec, str, buff, 1, 1, strlen(str));
     return vec;
 }
 
-int main(){
-
-    
-
-
-
-
+int main()
+{
 
     return 0;
 }

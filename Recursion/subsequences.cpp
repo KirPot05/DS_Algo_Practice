@@ -1,9 +1,11 @@
 #include <iostream>
 using namespace std;
 
-void subseq(string s, string ans){
+void subseq(string s, string ans)
+{
 
-    if(s.length() == 0){
+    if (s.length() == 0)
+    {
         cout << ans << endl;
         return;
     }
@@ -13,14 +15,12 @@ void subseq(string s, string ans){
 
     subseq(ros, ans);
     subseq(ros, ans + ch);
-
 }
 
-
-int main(){ 
+int main()
+{
 
     subseq("ABC", "");
-
 
     return 0;
 }
